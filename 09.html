@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <h1>Ejemplos de Elementos de Audio en HTML</h1>
+    
+    <p>El elemento <code>&lt;audio&gt;</code> permite insertar contenido de audio en una página web.</p>
+    
+    <h2>1. Audio básico con controles</h2>
+    <p>El atributo <code>controls</code> muestra los controles de reproducción predeterminados del navegador.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong></p>
+        <div class="audio-container">
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="codigo">&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</div>
+    </div>
+    
+    <h2>2. Audio con reproducción automática</h2>
+    <p>El atributo <code>autoplay</code> inicia la reproducción automáticamente (nota: muchos navegadores bloquean el autoplay).</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> (sin autoplay por restricciones del navegador)</p>
+        <div class="audio-container">
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="codigo">&lt;audio controls autoplay&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</div>
+    </div>
+    
+    <h2>3. Audio en bucle</h2>
+    <p>El atributo <code>loop</code> hace que el audio se repita indefinidamente.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong></p>
+        <div class="audio-container">
+            <audio controls loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="codigo">&lt;audio controls loop&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</div>
+    </div>
+    
+    <h2>4. Audio precargado</h2>
+    <p>El atributo <code>preload</code> especifica cómo debe cargarse el audio:</p>
+    <ul>
+        <li><code>none</code>: No precargar</li>
+        <li><code>metadata</code>: Precargar solo metadatos (duración, etc.)</li>
+        <li><code>auto</code>: Precargar el audio completo (valor por defecto)</li>
+    </ul>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> (precargando solo metadatos)</p>
+        <div class="audio-container">
+            <audio controls preload="metadata">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="codigo">&lt;audio controls preload="metadata"&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</div>
+    </div>
+    
+    <h2>5. Audio silenciado por defecto</h2>
+    <p>El atributo <code>muted</code> inicia el audio silenciado.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong></p>
+        <div class="audio-container">
+            <audio controls muted>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="codigo">&lt;audio controls muted&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</div>
+    </div>
+    
+    <h2>6. Múltiples formatos de audio</h2>
+    <p>Proporcionar múltiples fuentes en diferentes formatos aumenta la compatibilidad con navegadores.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong></p>
+        <div class="audio-container">
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+                <source src="audio.wav" type="audio/wav">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="codigo">&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    &lt;source src="audio.ogg" type="audio/ogg"&gt;
+    &lt;source src="audio.wav" type="audio/wav"&gt;
+    Tu navegador no soporta el elemento de audio.
+&lt;/audio&gt;</div>
+    </div>
+    
+    <h2>7. Audio sin controles visibles</h2>
+    <p>Puedes omitir el atributo <code>controls</code> y controlar la reproducción con JavaScript.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> (audio oculto, controlado por botones)</p>
+        <div class="audio-container">
+            <audio id="audioOculto">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <div>
+                <button onclick="document.getElementById('audioOculto').play()">Reproducir</button>
+                <button onclick="document.getElementById('audioOculto').pause()">Pausar</button>
+                <button onclick="document.getElementById('audioOculto').volume += 0.1">Subir Volumen</button>
+                <button onclick="document.getElementById('audioOculto').volume -= 0.1">Bajar Volumen</button>
+            </div>
+        </div>
+        <div class="codigo">&lt;audio id="miAudio"&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;button onclick="document.getElementById('miAudio').play()"&gt;Reproducir&lt;/button&gt;
+&lt;button onclick="document.getElementById('miAudio').pause()"&gt;Pausar&lt;/button&gt;</div>
+    </div>
+    
+    <div class="nota">
+        <p><strong>Nota:</strong> Los ejemplos utilizan archivos de audio de prueba de SoundHelix. En un caso real, reemplazarías las URLs con las de tus propios archivos de audio.</p>
+    </div>
+
+    <script>
+        // Script simple para controlar el audio oculto
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audioOculto');
+            audio.volume = 0.5; // Establecer volumen inicial al 50%
+        });
+    </script>
+    </audio>
+    <a href="index.html">Volver a la Sábana HTML</a>
+</body>
+</html>

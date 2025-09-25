@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Formularios HTML</title>
+</head>
+<body>
+    <h1>Ejemplos de Formularios HTML</h1>
+    
+    <h2>1. Formulario de contacto básico</h2>
+    <form action="/enviar" method="POST">
+        <fieldset>
+            <legend>Información de contacto</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto">
+            <br><br>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+            <br><br>
+            
+            <input type="submit" value="Enviar mensaje">
+        </fieldset>
+    </form>
+    
+    <h2>2. Formulario de registro</h2>
+    <form action="/registro" method="POST">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required maxlength="20">
+        <br><br>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required minlength="6">
+        <br><br>
+        
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        <br><br>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}">
+        <br><br>
+        
+        <input type="submit" value="Registrarse">
+        <input type="reset" value="Limpiar formulario">
+    </form>
+    
+    <h2>3. Formulario con opciones de selección</h2>
+    <form action="/encuesta" method="POST">
+        <fieldset>
+            <legend>Preferencias personales</legend>
+            
+            <p>Selecciona tu género:</p>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino">Femenino</label>
+            
+            <input type="radio" id="otro" name="genero" value="otro">
+            <label for="otro">Otro</label>
+            <br><br>
+            
+            <p>Selecciona tus hobbies:</p>
+            <input type="checkbox" id="deportes" name="hobbies" value="deportes">
+            <label for="deportes">Deportes</label>
+            
+            <input type="checkbox" id="lectura" name="hobbies" value="lectura">
+            <label for="lectura">Lectura</label>
+            
+            <input type="checkbox" id="musica" name="hobbies" value="musica">
+            <label for="musica">Música</label>
+            
+            <input type="checkbox" id="viajes" name="hobbies" value="viajes">
+            <label for="viajes">Viajes</label>
+            <br><br>
+            
+            <label for="pais">País de residencia:</label>
+            <select id="pais" name="pais">
+                <option value="">Selecciona un país</option>
+                <option value="es">España</option>
+                <option value="mx">México</option>
+                <option value="ar">Argentina</option>
+                <option value="co">Colombia</option>
+                <option value="pe">Perú</option>
+            </select>
+            <br><br>
+            
+            <label for="color_favorito">Color favorito:</label>
+            <input type="color" id="color_favorito" name="color_favorito">
+            <br><br>
+            
+            <input type="submit" value="Enviar encuesta">
+        </fieldset>
+    </form>
+    
+    <h2>4. Formulario de búsqueda</h2>
+    <form action="/buscar" method="GET">
+        <label for="busqueda">Buscar:</label>
+        <input type="search" id="busqueda" name="q" placeholder="Escribe tu búsqueda">
+        <input type="submit" value="Buscar">
+    </form>
+    
+    <h2>5. Formulario con diferentes tipos de input</h2>
+    <form action="/datos" method="POST">
+        <fieldset>
+            <legend>Tipos de campos de formulario</legend>
+            
+            <label for="numero">Número (1-100):</label>
+            <input type="number" id="numero" name="numero" min="1" max="100">
+            <br><br>
+            
+            <label for="rango">Rango (0-100):</label>
+            <input type="range" id="rango" name="rango" min="0" max="100" value="50">
+            <br><br>
+            
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora">
+            <br><br>
+            
+            <label for="semana">Semana del año:</label>
+            <input type="week" id="semana" name="semana">
+            <br><br>
+            
+            <label for="archivo">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx">
+            <br><br>
+            
+            <label for="url">Sitio web:</label>
+            <input type="url" id="url" name="url" placeholder="https://ejemplo.com">
+            <br><br>
+            
+            <label for="oculto">Campo oculto:</label>
+            <input type="hidden" id="oculto" name="token" value="abc123">
+            <span>(Este campo no es visible para el usuario)</span>
+            <br><br>
+            
+            <input type="submit" value="Enviar datos">
+        </fieldset>
+    </form>
+    
+    <h2>6. Formulario con lista de opciones (datalist)</h2>
+    <form action="/sugerencias" method="POST">
+        <label for="ciudad">Ciudad (con sugerencias):</label>
+        <input list="ciudades" id="ciudad" name="ciudad">
+        <datalist id="ciudades">
+            <option value="Madrid">
+            <option value="Barcelona">
+            <option value="Valencia">
+            <option value="Sevilla">
+            <option value="Bilbao">
+        </datalist>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <h2>7. Formulario de inicio de sesión</h2>
+    <form action="/login" method="POST">
+        <table>
+            <tr>
+                <td><label for="login_usuario">Usuario:</label></td>
+                <td><input type="text" id="login_usuario" name="usuario" required></td>
+            </tr>
+            <tr>
+                <td><label for="login_contrasena">Contraseña:</label></td>
+                <td><input type="password" id="login_contrasena" name="contrasena" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="recordar" name="recordar">
+                    <label for="recordar">Recordar mis datos</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Iniciar sesión">
+                    <button type="button">Cancelar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <h2>8. Formulario con campos agrupados</h2>
+    <form action="/pedido" method="POST">
+        <fieldset>
+            <legend>Información del cliente</legend>
+            <label for="cliente_nombre">Nombre completo:</label>
+            <input type="text" id="cliente_nombre" name="cliente_nombre" required>
+            <br><br>
+            
+            <label for="cliente_direccion">Dirección:</label>
+            <textarea id="cliente_direccion" name="cliente_direccion" rows="3" cols="40"></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Detalles del pedido</legend>
+            <label for="producto">Producto:</label>
+            <select id="producto" name="producto">
+                <option value="laptop">Laptop</option>
+                <option value="tablet">Tablet</option>
+                <option value="smartphone">Smartphone</option>
+            </select>
+            <br><br>
+            
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+            <br><br>
+            
+            <label for="comentarios">Comentarios adicionales:</label>
+            <textarea id="comentarios" name="comentarios" rows="3" cols="40"></textarea>
+        </fieldset>
+        
+        <input type="submit" value="Realizar pedido">
+        <input type="reset" value="Cancelar">
+    </form>
+    
+    <h2>9. Formulario con validación HTML5</h2>
+    <form action="/validar" method="POST">
+        <label for="email_valido">Email (validación automática):</label>
+        <input type="email" id="email_valido" name="email" required>
+        <br><br>
+        
+        <label for="edad">Edad (18-65):</label>
+        <input type="number" id="edad" name="edad" min="18" max="65" required>
+        <br><br>
+        
+        <label for="codigo_postal">Código postal (5 dígitos):</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" pattern="[0-9]{5}" title="5 dígitos numéricos">
+        <br><br>
+        
+        <label for="sitio_web">Sitio web (debe empezar con http:// o https://):</label>
+        <input type="url" id="sitio_web" name="sitio_web" pattern="https?://.+" title="Debe empezar con http:// o https://">
+        <br><br>
+        
+        <input type="submit" value="Validar y enviar">
+    </form>
+    
+    <h2>10. Formulario con botones personalizados</h2>
+    <form action="/acciones" method="POST">
+        <label for="comentario_final">Comentario:</label>
+        <textarea id="comentario_final" name="comentario" rows="3" cols="40"></textarea>
+        <br><br>
+        
+        <button type="submit">Enviar formulario</button>
+        <button type="reset">Restablecer</button>
+        <button type="button" onclick="alert('Botón personalizado')">Acción personalizada</button>
+        <br><br>
+        
+        <input type="image" src="" alt="Enviar con imagen" width="100" height="30" style="background-color: #ccc; border: 1px solid #000;">
+    </form>
+
+    <a href="index.html">Volver a la Sábana HTML</a>
+</body>
+</html>

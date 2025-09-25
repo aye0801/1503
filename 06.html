@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura Básica de Tablas HTML</title>
+</head>
+<body>
+    <h1>Estructura Básica de Tablas HTML</h1>
+    
+    <h2>¿Qué es una tabla HTML?</h2>
+    <p>Una tabla HTML es una estructura que permite organizar datos en filas y columnas.</p>
+    
+    <h2>Elementos básicos de una tabla</h2>
+    <table border="1">
+        <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>&lt;table&gt;</td>
+            <td>Contenedor principal que define la tabla</td>
+        </tr>
+        <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Define una fila dentro de la tabla</td>
+        </tr>
+        <tr>
+            <td>&lt;th&gt;</td>
+            <td>Define una celda de encabezado (header cell)</td>
+        </tr>
+        <tr>
+            <td>&lt;td&gt;</td>
+            <td>Define una celda de datos (table data)</td>
+        </tr>
+    </table>
+    
+    <h2>Ejemplo de tabla básica</h2>
+    <table border="1">
+        <tr>
+            <td>Fila 1, Columna 1</td>
+            <td>Fila 1, Columna 2</td>
+        </tr>
+        <tr>
+            <td>Fila 2, Columna 1</td>
+            <td>Fila 2, Columna 2</td>
+        </tr>
+    </table>
+    
+    <h2>Código HTML del ejemplo anterior</h2>
+    <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Fila 1, Columna 1&lt;/td&gt;
+        &lt;td&gt;Fila 1, Columna 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Fila 2, Columna 1&lt;/td&gt;
+        &lt;td&gt;Fila 2, Columna 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+    </pre>
+    
+    <h2>Tabla con encabezados</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>25</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>30</td>
+            <td>Barcelona</td>
+        </tr>
+    </table>
+    
+    <h2>Tabla con atributos colspan y rowspan</h2>
+    <table border="1">
+        <tr>
+            <th rowspan="2">Mes</th>
+            <th colspan="2">Ventas</th>
+        </tr>
+        <tr>
+            <th>Producto A</th>
+            <th>Producto B</th>
+        </tr>
+        <tr>
+            <td>Enero</td>
+            <td>100</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>Febrero</td>
+            <td>120</td>
+            <td>180</td>
+        </tr>
+    </table>
+    
+    <h2>Elementos adicionales para tablas</h2>
+    <table border="1">
+        <tr>
+            <th>Elemento</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>&lt;caption&gt;</td>
+            <td>Proporciona un título para la tabla</td>
+        </tr>
+        <tr>
+            <td>&lt;thead&gt;</td>
+            <td>Agrupa el contenido del encabezado</td>
+        </tr>
+        <tr>
+            <td>&lt;tbody&gt;</td>
+            <td>Agrupa el contenido del cuerpo</td>
+        </tr>
+        <tr>
+            <td>&lt;tfoot&gt;</td>
+            <td>Agrupa el contenido del pie</td>
+        </tr>
+    </table>
+    
+    <h2>Tabla completa con elementos semánticos</h2>
+    <table border="1">
+        <caption>Lista de empleados</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Ana García</td>
+                <td>Ventas</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Luis Martínez</td>
+                <td>Marketing</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total empleados: 2</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <h2>Atributos importantes para tablas</h2>
+    <ul>
+        <li><strong>border</strong>: Define el grosor del borde (en píxeles)</li>
+        <li><strong>cellpadding</strong>: Espacio entre el contenido y el borde de la celda</li>
+        <li><strong>cellspacing</strong>: Espacio entre las celdas</li>
+        <li><strong>colspan</strong>: Número de columnas que ocupa una celda</li>
+        <li><strong>rowspan</strong>: Número de filas que ocupa una celda</li>
+    </ul>
+    
+    <p><strong>Nota:</strong> Aunque estos atributos siguen funcionando, en HTML5 se recomienda utilizar CSS para controlar la apariencia de las tablas.</p>
+<a href="index.html">Volver a la Sábana HTML</a>
+
+</body>
+</html>

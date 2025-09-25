@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Video HTML</title>
+</head>
+<body>
+    <h1>Ejemplos de Elementos de Video en HTML</h1>
+    
+    <p>El elemento &lt;video&gt; permite insertar contenido de video en una página web.</p>
+    
+    <h2>1. Video básico con controles</h2>
+    <p>El atributo controls muestra los controles de reproducción predeterminados del navegador.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls width="640"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>2. Video con reproducción automática</h2>
+    <p>El atributo autoplay inicia la reproducción automáticamente (nota: muchos navegadores bloquean el autoplay).</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls autoplay muted width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls autoplay muted&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>3. Video en bucle</h2>
+    <p>El atributo loop hace que el video se repita indefinidamente.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls loop width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls loop&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>4. Video con poster</h2>
+    <p>El atributo poster muestra una imagen antes de que el video comience a reproducirse.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg" width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls poster="imagen-poster.jpg"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>5. Video precargado</h2>
+    <p>El atributo preload especifica cómo debe cargarse el video:</p>
+    <ul>
+        <li>none: No precargar</li>
+        <li>metadata: Precargar solo metadatos (duración, etc.)</li>
+        <li>auto: Precargar el video completo (valor por defecto)</li>
+    </ul>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls preload="metadata" width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls preload="metadata"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>6. Video silenciado por defecto</h2>
+    <p>El atributo muted inicia el video silenciado.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls muted width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls muted&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>7. Múltiples formatos de video</h2>
+    <p>Proporcionar múltiples fuentes en diferentes formatos aumenta la compatibilidad con navegadores.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+            <source src="video.webm" type="video/webm">
+            <source src="video.ogg" type="video/ogg">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;source src="video.webm" type="video/webm"&gt;
+    &lt;source src="video.ogg" type="video/ogg"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>8. Video sin controles visibles</h2>
+    <p>Puedes omitir el atributo controls y controlar la reproducción con JavaScript.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video id="videoOculto" width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <div>
+            <button onclick="document.getElementById('videoOculto').play()">Reproducir</button>
+            <button onclick="document.getElementById('videoOculto').pause()">Pausar</button>
+            <button onclick="document.getElementById('videoOculto').volume += 0.1">Subir Volumen</button>
+            <button onclick="document.getElementById('videoOculto').volume -= 0.1">Bajar Volumen</button>
+            <button onclick="document.getElementById('videoOculto').muted = !document.getElementById('videoOculto').muted">Silenciar/Desilenciar</button>
+        </div>
+    </div>
+    
+    <pre><code>&lt;video id="miVideo"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;button onclick="document.getElementById('miVideo').play()"&gt;Reproducir&lt;/button&gt;
+&lt;button onclick="document.getElementById('miVideo').pause()"&gt;Pausar&lt;/button&gt;</code></pre>
+    
+    <h2>9. Video con dimensiones específicas</h2>
+    <p>Puedes especificar el ancho y alto del video con los atributos width y height.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls width="320" height="240">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls width="320" height="240"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+    
+    <h2>10. Video con pistas de texto (subtítulos)</h2>
+    <p>Puedes agregar subtítulos usando el elemento &lt;track&gt;.</p>
+    
+    <div>
+        <p>Ejemplo en acción:</p>
+        <video controls width="640">
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+            <track kind="subtitles" src="subtitles.vtt" srclang="es" label="Español">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+    
+    <pre><code>&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    &lt;track kind="subtitles" src="subtitles.vtt" srclang="es" label="Español"&gt;
+    Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+
+    <script>
+        // Script simple para controlar el video oculto
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('videoOculto');
+            video.volume = 0.5; // Establecer volumen inicial al 50%
+        });
+    </script>
+
+    <a href="index.html">Volver a la Sábana HTML</a>
+</body>
+</html>

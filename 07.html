@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIPERVINCULOS</title>
+</head>
+<body>
+    
+   
+      <h1>Ejemplos de Hipervínculos en HTML</h1>
+    
+    <p>Los hipervínculos (o enlaces) son elementos fundamentales en HTML que permiten navegar entre páginas web.</p>
+    
+    <h2>1. Hipervínculo básico</h2>
+    <p>El elemento <code>&lt;a&gt;</code> (anchor) crea un hipervínculo. El atributo <code>href</code> especifica la URL de destino.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> <a href="https://www.ejemplo.com">Visitar Ejemplo.com</a></p>
+        <div class="codigo">&lt;a href="https://www.ejemplo.com"&gt;Visitar Ejemplo.com&lt;/a&gt;</div>
+    </div>
+    
+    <h2>2. Hipervínculo que abre en nueva pestaña</h2>
+    <p>Usando el atributo <code>target="_blank"</code>, el enlace se abrirá en una nueva pestaña o ventana.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> <a href="https://www.google.com" target="_blank">Abrir Google en nueva pestaña</a></p>
+        <div class="codigo">&lt;a href="https://www.google.com" target="_blank"&gt;Abrir Google en nueva pestaña&lt;/a&gt;</div>
+    </div>
+    
+    <h2>3. Hipervínculo a una sección de la misma página</h2>
+    <p>Podemos enlazar a secciones específicas de la misma página usando el atributo <code>id</code>.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> <a href="#seccion-destino">Ir a la sección de destino</a></p>
+        <div class="codigo">&lt;a href="#seccion-destino"&gt;Ir a la sección de destino&lt;/a&gt;</div>
+    </div>
+    
+    <h2>4. Hipervínculo a un archivo local</h2>
+    <p>Podemos enlazar a archivos dentro de nuestro propio sitio web usando rutas relativas.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> <a href="documento.pdf" target="_blank">Abrir documento PDF</a> (enlace simulado)</p>
+        <div class="codigo">&lt;a href="documento.pdf"&gt;Abrir documento PDF&lt;/a&gt;</div>
+    </div>
+    
+    <h2>5. Hipervínculo de correo electrónico</h2>
+    <p>Usando <code>mailto:</code> en el atributo <code>href</code>, podemos crear enlaces que abren el cliente de correo.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> <a href="mailto:info@ejemplo.com">Enviar correo a info@ejemplo.com</a></p>
+        <div class="codigo">&lt;a href="mailto:info@ejemplo.com"&gt;Enviar correo a info@ejemplo.com&lt;/a&gt;</div>
+    </div>
+    
+    <h2>6. Hipervínculo con título (tooltip)</h2>
+    <p>El atributo <code>title</code> muestra un texto emergente cuando el usuario pasa el cursor sobre el enlace.</p>
+    
+    <div class="ejemplo">
+        <p><strong>Ejemplo en acción:</strong> <a href="https://www.wikipedia.org" title="Enciclopedia libre en línea">Visitar Wikipedia</a></p>
+        <div class="codigo">&lt;a href="https://www.wikipedia.org" title="Enciclopedia libre en línea"&gt;Visitar Wikipedia&lt;/a&gt;</div>
+    </div>
+    
+    <h2 id="seccion-destino">Sección de destino</h2>
+    <p>¡Has llegado a esta sección usando un enlace interno! Puedes <a href="#">volver al inicio</a>.</p>
+    
+    <div class="nota">
+        <p><strong>Nota:</strong> Algunos enlaces en este ejemplo son simulados y no funcionarán al hacer clic, pero el código HTML es correcto.</p>
+    </div>
+    
+    
+
+
+    <a href="index.html">Volver a la Sábana HTML</a>
+</body>
+</html>
