@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas Avanzadas en HTML con Multimedia Funcional</title>
+</head>
+<body>
+  <header>
+    <h1>Etiquetas Avanzadas en HTML con Multimedia</h1>
+    <p>Explora ejemplos funcionales de etiquetas avanzadas de HTML con contenido multimedia e interactivo. Aprende sobre su uso, características y alternativas modernas.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. &lt;iframe&gt; - Incrustar contenido externo</h2>
+      <p>Permite incrustar otra página web dentro de la página actual. Es útil para mostrar contenido de terceros como mapas, videos o documentos.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Permite la integración de contenido externo</li>
+          <li>Puede tener dimensiones personalizadas</li>
+          <li>Soporta atributos de seguridad como sandbox</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <iframe src="https://es.wikipedia.org/wiki/Wikipedia:Portada" width="400" height="250" title="Ejemplo iframe"></iframe>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;iframe src="https://ejemplo.com" width="400" height="300"&gt;&lt;/iframe&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. &lt;script&gt; - Integración de JavaScript</h2>
+      <p>Permite agregar código JavaScript directamente en el documento HTML o enlazar archivos externos.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Ejecuta código JavaScript en el navegador</li>
+          <li>Puede estar en línea o referenciar archivos externos</li>
+          <li>Soporta atributos como async y defer para controlar la carga</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <button onclick="alert('¡Hola! Esto es un script funcionando')">Haz clic aquí</button>
+        <button onclick="cambiarColor()">Cambiar color de fondo</button>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;script&gt;
+function miFuncion() {
+  alert('¡Hola mundo!');
+}
+&lt;/script&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. &lt;style&gt; - Estilos CSS internos</h2>
+      <p>Permite definir estilos CSS directamente dentro del documento HTML.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Define estilos específicos para la página</li>
+          <li>Útil para estilos que no se reutilizan en otras páginas</li>
+          <li>Se puede usar junto con hojas de estilo externas</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <style>
+          .resaltado {
+            color: blue;
+            font-weight: bold;
+          }
+          .fondo-destacado {
+            background-color: yellow;
+            padding: 5px;
+          }
+        </style>
+        <p class="resaltado">Este texto está resaltado usando CSS dentro de &lt;style&gt;.</p>
+        <p class="fondo-destacado">Este texto tiene un fondo destacado.</p>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;style&gt;
+.mi-clase {
+  color: red;
+  font-size: 16px;
+}
+&lt;/style&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. &lt;embed&gt; - Contenido multimedia incrustado</h2>
+      <p>Incrusta contenido externo como PDFs, SWF u otros tipos de archivos. Aunque es una etiqueta antigua, aún se utiliza en algunos contextos.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Incrusta contenido interactivo o multimedia</li>
+          <li>Requiere que el navegador tenga el plugin adecuado</li>
+          <li>En muchos casos, se prefiere usar iframe u object</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional (PDF usando iframe como alternativa):</h3>
+        <iframe src="https://docs.google.com/viewer?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true" width="600" height="400"></iframe>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;embed src="documento.pdf" width="600" height="400" type="application/pdf"&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. &lt;audio&gt; - Reproductor de audio</h2>
+      <p>Etiqueta moderna para incrustar y reproducir archivos de audio en una página web.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Reproduce archivos de audio sin necesidad de plugins</li>
+          <li>Soporta múltiples formatos (MP3, WAV, OGG)</li>
+          <li>Controles personalizables para reproducción</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional (reemplazo de bgsound obsoleto):</h3>
+        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls loop></audio>
+        <p><small>Nota: El atributo autoplay se ha eliminado para mejor experiencia de usuario.</small></p>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;audio src="audio.mp3" controls&gt;
+  Tu navegador no soporta el elemento audio.
+&lt;/audio&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. &lt;object&gt; - Objetos incrustados (reemplazo de applet)</h2>
+      <p>Etiqueta moderna para incrustar objetos externos como aplicaciones Java, PDFs o contenido multimedia.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Reemplaza a la etiqueta &lt;applet&gt; obsoleta</li>
+          <li>Puede incrustar diversos tipos de contenido</li>
+          <li>Más seguro y estándar que las alternativas antiguas</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional (simulación):</h3>
+        <p>Ejemplo moderno usando &lt;object&gt; para incrustar un PDF:</p>
+        <object data="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" type="application/pdf" width="600" height="400">
+          <p>Tu navegador no puede mostrar este PDF. <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf">Descárgalo aquí</a>.</p>
+        </object>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;object data="applet.jar" type="application/x-java-applet"&gt;
+  &lt;p&gt;Tu navegador no soporta Java applets.&lt;/p&gt;
+&lt;/object&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. &lt;iframe&gt; como reemplazo de &lt;frame&gt;</h2>
+      <p>Los framesets y frames han sido reemplazados por iframes en el HTML moderno.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Los framesets dividían la ventana en varias secciones</li>
+          <li>Los iframes son más flexibles y modernos</li>
+          <li>Mejor compatibilidad con dispositivos móviles</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional (simulación de frame con iframe):</h3>
+        <iframe src="https://es.wikipedia.org/wiki/Wikipedia:Portada" width="400" height="200" title="Frame simulado"></iframe>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo (frameset obsoleto):</h3>
+        <pre><code>&lt;!-- Código obsoleto --&gt;
+&lt;frameset cols="25%,75%"&gt;
+  &lt;frame src="menu.html"&gt;
+  &lt;frame src="contenido.html"&gt;
+&lt;/frameset&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. Alternativas modernas a &lt;marquee&gt;</h2>
+      <p>La etiqueta &lt;marquee&gt; está obsoleta y se recomienda usar CSS o JavaScript para animaciones.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>&lt;marquee&gt; creaba texto en movimiento</li>
+          <li>Ahora se usa CSS animations o JavaScript</li>
+          <li>Las alternativas modernas son más eficientes y accesibles</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional (marquee obsoleto vs. alternativa CSS):</h3>
+        <p>Ejemplo con &lt;marquee&gt; (obsoleto pero aún funciona en algunos navegadores):</p>
+        <marquee>Este texto se mueve de izquierda a derecha usando la etiqueta obsoleta &lt;marquee&gt;.</marquee>
+        
+        <p>Alternativa moderna con CSS (requeriría estilos):</p>
+        <div style="overflow: hidden; width: 100%;">
+          <div style="animation: marquee 10s linear infinite; white-space: nowrap;">
+            Este texto se movería con animación CSS (sin estilos aplicados).
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo (alternativa CSS):</h3>
+        <pre><code>&lt;style&gt;
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+&lt;/style&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>9. &lt;img&gt; - Imágenes en la web</h2>
+      <p>Etiqueta fundamental para mostrar imágenes en páginas web.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Soporta múltiples formatos (JPEG, PNG, GIF, SVG, WebP)</li>
+          <li>Atributos importantes: src, alt, width, height</li>
+          <li>Nuevos atributos como loading="lazy" para carga diferida</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <p>Imágenes de ejemplo cargadas desde fuentes externas:</p>
+        <img src="https://www.w3schools.com/html/img_chania.jpg" alt="Paisaje de Canea, Grecia" width="300">
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Retrato de una mujer" width="200">
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;img src="imagen.jpg" alt="Descripción de la imagen" width="400" height="300"&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>10. &lt;video&gt; - Reproductor de video</h2>
+      <p>Etiqueta moderna para incrustar y reproducir videos en una página web.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Reproduce video sin necesidad de plugins como Flash</li>
+          <li>Soporta múltiples formatos (MP4, WebM, OGG)</li>
+          <li>Controles de reproducción, volumen y pantalla completa</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <video width="480" controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;video width="640" height="360" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  Tu navegador no soporta el elemento de video.
+&lt;/video&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>11. &lt;canvas&gt; - Gráficos y animaciones</h2>
+      <p>Elemento para dibujar gráficos, animaciones y visualizaciones mediante JavaScript.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Superficie de dibujo mediante API de JavaScript</li>
+          <li>Ideal para gráficos, juegos y visualizaciones complejas</li>
+          <li>Requiere scripting para mostrar contenido</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <canvas id="miCanvas" width="300" height="150">Tu navegador no soporta el elemento canvas.</canvas>
+        <script>
+          var canvas = document.getElementById('miCanvas');
+          var ctx = canvas.getContext('2d');
+          ctx.fillStyle = 'red';
+          ctx.fillRect(10, 10, 100, 100);
+          ctx.fillStyle = 'blue';
+          ctx.fillRect(120, 10, 100, 100);
+        </script>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;canvas id="lienzo" width="400" height="200"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var canvas = document.getElementById('lienzo');
+  var ctx = canvas.getContext('2d');
+  ctx.fillRect(0, 0, 400, 200);
+&lt;/script&gt;</code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2>12. &lt;svg&gt; - Gráficos vectoriales</h2>
+      <p>Elemento para crear gráficos vectoriales escalables directamente en HTML.</p>
+      
+      <div>
+        <h3>Características principales:</h3>
+        <ul>
+          <li>Gráficos que no pierden calidad al escalarse</li>
+          <li>Se puede manipular con CSS y JavaScript</li>
+          <li>Ideal para iconos, gráficos simples y animaciones</li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3>Ejemplo funcional:</h3>
+        <svg width="200" height="200">
+          <circle cx="100" cy="100" r="80" fill="green" />
+          <text x="100" y="110" text-anchor="middle" fill="white">SVG</text>
+        </svg>
+      </div>
+      
+      <div>
+        <h3>Código de ejemplo:</h3>
+        <pre><code>&lt;svg width="100" height="100"&gt;
+  &lt;circle cx="50" cy="50" r="40" fill="red" /&gt;
+&lt;/svg&gt;</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Ejemplos de etiquetas avanzadas en HTML con multimedia funcional.</p>
+    <p>Recuerda que algunas etiquetas están obsoletas y deben reemplazarse por alternativas modernas.</p>
+  </footer>
+
+  <script>
+    // Función para cambiar el color de fondo
+    function cambiarColor() {
+      var colores = ['#f0f0f0', '#e0e0e0', '#d0d0d0', '#c0c0c0'];
+      var colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+      document.body.style.backgroundColor = colorAleatorio;
+    }
+  </script>
+</body>
+</html>
